@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:conttext="http://www.springframework.org/schema/context"
+
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:annotation-config />
+
+    <context:component-scan base-package="com">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <!--使用bean的属性scope来配置bean的作用域，默认值为singleton，初始化时，在整个bean生命周期内容器内只创建一个bean，单例的
+    prototype初始化时不创建，在每次请求时创建-->
+<bean id="bus" class="com.spring.beans.Bus"
+        scope="prototype">
+    <property name="brand" value="bsj"></property>
+    <property name="price" value="3000"></property>
+</bean>
+
+<!--c3p0通过配置文件获取数据库连接属性-->
+<conttext:property-placeholder location="classpath:db.properties"/>
+    <bean id="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="user" value="${user}"></property>
+        <property name="password" value="${password}"></property>
+        <property name="driverClass" value="${driverClass}"></property>
+        <property name="jdbcUrl" value="${jdbcUrl}"></property>
+    </bean>
+
+    <bean id="bus2" class="com.spring.beans.Bus">
+        <property name="brand" value="audi"></property>
+        <property name="price" value="300000"></property>
+        <!--使用SpEL引用类的静态属性-->
+        <property name="tyrePerimeter" value="#{T(java.lang.Math).PI*80}"></property>
+    </bean>
+    <bean id="newPerson" class="com.spring.beans.NewPerson">
+       <!--使用SpEL来应用其他的bean-->
+        <property name="bus" value="#{bus2}"/>
+        <!--使用SpEL来应用其他的bean的属性-->
+        <property name="age" value="#{bus2.price}"/>
+        <!--在SpEL中使用运算符-->
+        <property name="info" value="#{bus2.price >3000?'金领':'白领'}"></property>
+        <property name="name" value ="TOM"></property>
+    </bean>
+
+</beans>

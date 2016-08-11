@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: org.apache.httpcomponents:httpcore:4.4.1">
+    <archive path="E:/gitcode/maven/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar" />
+  </library>
+  <library name="Maven: org.apache.commons:commons-lang3:3.4">
+    <archive path="E:/gitcode/maven/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-aop:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-aop/4.1.4.RELEASE/spring-aop-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-beans:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-beans/4.1.4.RELEASE/spring-beans-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: javax.transaction:jta:1.1">
+    <archive path="E:/gitcode/maven/javax/transaction/jta/1.1/jta-1.1.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-misc:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-misc/4.10.4/lucene-misc-4.10.4.jar" />
+  </library>
+  <library name="Maven: javax.mail:mail:1.4.1">
+    <archive path="E:/gitcode/maven/javax/mail/mail/1.4.1/mail-1.4.1.jar" />
+  </library>
+  <library name="Maven: asm:asm:1.5.3">
+    <archive path="E:/gitcode/maven/asm/asm/1.5.3/asm-1.5.3.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-context:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-context/4.1.4.RELEASE/spring-context-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.ow2.asm:asm:4.1">
+    <archive path="E:/gitcode/maven/org/ow2/asm/asm/4.1/asm-4.1.jar" />
+  </library>
+  <library name="Maven: org.antlr:antlr-runtime:3.5">
+    <archive path="E:/gitcode/maven/org/antlr/antlr-runtime/3.5/antlr-runtime-3.5.jar" />
+  </library>
+  <library name="Maven: org.elasticsearch:elasticsearch:1.6.0">
+    <archive path="E:/gitcode/maven/org/elasticsearch/elasticsearch/1.6.0/elasticsearch-1.6.0.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-highlighter:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-highlighter/4.10.4/lucene-highlighter-4.10.4.jar" />
+  </library>
+  <library name="Maven: org.hibernate:hibernate-commons-annotations:3.0.0.ga">
+    <archive path="E:/gitcode/maven/org/hibernate/hibernate-commons-annotations/3.0.0.ga/hibernate-commons-annotations-3.0.0.ga.jar" />
+  </library>
+  <library name="Maven: commons-logging:commons-logging:1.2">
+    <archive path="E:/gitcode/maven/commons-logging/commons-logging/1.2/commons-logging-1.2.jar" />
+  </library>
+  <library name="Maven: commons-collections:commons-collections:3.2.1">
+    <archive path="E:/gitcode/maven/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.core:jackson-databind:2.5.0">
+    <archive path="E:/gitcode/maven/com/fasterxml/jackson/core/jackson-databind/2.5.0/jackson-databind-2.5.0.jar" />
+  </library>
+  <library name="Maven: org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.0.2">
+    <archive path="E:/gitcode/maven/org/eclipse/paho/org.eclipse.paho.client.mqttv3/1.0.2/org.eclipse.paho.client.mqttv3-1.0.2.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-web:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-web/4.1.4.RELEASE/spring-web-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: asm:asm-attrs:1.5.3">
+    <archive path="E:/gitcode/maven/asm/asm-attrs/1.5.3/asm-attrs-1.5.3.jar" />
+  </library>
+  <library name="Maven: org.mybatis:mybatis-spring:1.2.3">
+    <archive path="E:/gitcode/maven/org/mybatis/mybatis-spring/1.2.3/mybatis-spring-1.2.3.jar" />
+  </library>
+  <library name="Maven: redis.clients:jedis:2.5.1">
+    <archive path="E:/gitcode/maven/redis/clients/jedis/2.5.1/jedis-2.5.1.jar" />
+  </library>
+  <library name="Maven: com.rabbitmq:amqp-client:2.8.2">
+    <archive path="E:/gitcode/maven/com/rabbitmq/amqp-client/2.8.2/amqp-client-2.8.2.jar" />
+  </library>
+  <library name="Maven: commons-fileupload:commons-fileupload:1.2.2">
+    <archive path="E:/gitcode/maven/commons-fileupload/commons-fileupload/1.2.2/commons-fileupload-1.2.2.jar" />
+  </library>
+  <library name="Maven: net.sf.ezmorph:ezmorph:1.0.6">
+    <archive path="E:/gitcode/maven/net/sf/ezmorph/ezmorph/1.0.6/ezmorph-1.0.6.jar" />
+  </library>
+  <library name="Maven: org.apache.httpcomponents:httpclient:4.5">
+    <archive path="E:/gitcode/maven/org/apache/httpcomponents/httpclient/4.5/httpclient-4.5.jar" />
+  </library>
+  <library name="Maven: org.springframework.amqp:spring-amqp:1.1.1.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/amqp/spring-amqp/1.1.1.RELEASE/spring-amqp-1.1.1.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.ow2.asm:asm-commons:4.1">
+    <archive path="E:/gitcode/maven/org/ow2/asm/asm-commons/4.1/asm-commons-4.1.jar" />
+  </library>
+  <library name="Maven: antlr:antlr:2.7.6">
+    <archive path="E:/gitcode/maven/antlr/antlr/2.7.6/antlr-2.7.6.jar" />
+  </library>
+  <library name="Maven: javax.servlet:jstl:1.2">
+    <archive path="E:/gitcode/maven/javax/servlet/jstl/1.2/jstl-1.2.jar" />
+  </library>
+  <library name="Maven: javax.activation:activation:1.1">
+    <archive path="E:/gitcode/maven/javax/activation/activation/1.1/activation-1.1.jar" />
+  </library>
+  <library name="Maven: com.google.collections:google-collections:1.0">
+    <archive path="E:/gitcode/maven/com/google/collections/google-collections/1.0/google-collections-1.0.jar" />
+  </library>
+  <library name="Maven: log4j:log4j:1.2.17">
+    <archive path="E:/gitcode/maven/log4j/log4j/1.2.17/log4j-1.2.17.jar" />
+  </library>
+  <library name="Maven: com.jcraft:jsch:0.1.52">
+    <archive path="E:/gitcode/maven/com/jcraft/jsch/0.1.52/jsch-0.1.52.jar" />
+  </library>
+  <library name="Maven: org.yaml:snakeyaml:1.12">
+    <archive path="E:/gitcode/maven/org/yaml/snakeyaml/1.12/snakeyaml-1.12.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-join:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-join/4.10.4/lucene-join-4.10.4.jar" />
+  </library>
+  <library name="Maven: org.slf4j:slf4j-api:1.7.7">
+    <archive path="E:/gitcode/maven/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar" />
+  </library>
+  <library name="Maven: net.sf.json-lib:json-lib:jdk15:2.4">
+    <archive path="E:/gitcode/maven/net/sf/json-lib/json-lib/2.4/json-lib-2.4-jdk15.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-jdbc:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-jdbc/4.1.4.RELEASE/spring-jdbc-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.slf4j:jcl-over-slf4j:1.7.7">
+    <archive path="E:/gitcode/maven/org/slf4j/jcl-over-slf4j/1.7.7/jcl-over-slf4j-1.7.7.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-test:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-test/4.1.4.RELEASE/spring-test-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: com.alibaba:druid:1.0.12">
+    <archive path="E:/gitcode/maven/com/alibaba/druid/1.0.12/druid-1.0.12.jar" />
+  </library>
+  <library name="Maven: commons-codec:commons-codec:1.9">
+    <archive path="E:/gitcode/maven/commons-codec/commons-codec/1.9/commons-codec-1.9.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-core:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-core/4.1.4.RELEASE/spring-core-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: javassist:javassist:3.4.GA">
+    <archive path="E:/gitcode/maven/javassist/javassist/3.4.GA/javassist-3.4.GA.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-tx:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-tx/4.1.4.RELEASE/spring-tx-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.hibernate:ejb3-persistence:1.0.1.GA">
+    <archive path="E:/gitcode/maven/org/hibernate/ejb3-persistence/1.0.1.GA/ejb3-persistence-1.0.1.GA.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-memory:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-memory/4.10.4/lucene-memory-4.10.4.jar" />
+  </library>
+  <library name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13">
+    <archive path="E:/gitcode/maven/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar" />
+  </library>
+  <library name="Maven: javax:javaee-web-api:7.0">
+    <archive path="E:/gitcode/maven/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar" />
+  </library>
+  <library name="Maven: aopalliance:aopalliance:1.0">
+    <archive path="E:/gitcode/maven/aopalliance/aopalliance/1.0/aopalliance-1.0.jar" />
+  </library>
+  <library name="Maven: javax.servlet:servlet-api:3.0-alpha-1">
+    <archive path="E:/gitcode/maven/javax/servlet/servlet-api/3.0-alpha-1/servlet-api-3.0-alpha-1.jar" />
+  </library>
+  <library name="Maven: com.caucho:hessian:4.0.7">
+    <archive path="E:/gitcode/maven/com/caucho/hessian/4.0.7/hessian-4.0.7.jar" />
+  </library>
+  <library name="Maven: commons-beanutils:commons-beanutils:1.8.0">
+    <archive path="E:/gitcode/maven/commons-beanutils/commons-beanutils/1.8.0/commons-beanutils-1.8.0.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-queryparser:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-queryparser/4.10.4/lucene-queryparser-4.10.4.jar" />
+  </library>
+  <library name="Maven: org.slf4j:slf4j-log4j12:1.7.7">
+    <archive path="E:/gitcode/maven/org/slf4j/slf4j-log4j12/1.7.7/slf4j-log4j12-1.7.7.jar" />
+  </library>
+  <library name="Maven: org.apache.commons:commons-email:1.3.2">
+    <archive path="E:/gitcode/maven/org/apache/commons/commons-email/1.3.2/commons-email-1.3.2.jar" />
+  </library>
+  <library name="Maven: com.alibaba:fastjson:1.2.3">
+    <archive path="E:/gitcode/maven/com/alibaba/fastjson/1.2.3/fastjson-1.2.3.jar" />
+  </library>
+  <library name="Maven: mysql:mysql-connector-java:5.1.17">
+    <archive path="E:/gitcode/maven/mysql/mysql-connector-java/5.1.17/mysql-connector-java-5.1.17.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-core:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-core/4.10.4/lucene-core-4.10.4.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-suggest:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-suggest/4.10.4/lucene-suggest-4.10.4.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-sandbox:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-sandbox/4.10.4/lucene-sandbox-4.10.4.jar" />
+  </library>
+  <library name="Maven: cglib:cglib:2.1_3">
+    <archive path="E:/gitcode/maven/cglib/cglib/2.1_3/cglib-2.1_3.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-webmvc:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-webmvc/4.1.4.RELEASE/spring-webmvc-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: junit:junit:3.8.1">
+    <archive path="E:/gitcode/maven/junit/junit/3.8.1/junit-3.8.1.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.5.0">
+    <archive path="E:/gitcode/maven/com/fasterxml/jackson/core/jackson-annotations/2.5.0/jackson-annotations-2.5.0.jar" />
+  </library>
+  <library name="Maven: org.mybatis:mybatis:3.3.0">
+    <archive path="E:/gitcode/maven/org/mybatis/mybatis/3.3.0/mybatis-3.3.0.jar" />
+  </library>
+  <library name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13">
+    <archive path="E:/gitcode/maven/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar" />
+  </library>
+  <library name="Maven: commons-lang:commons-lang:2.5">
+    <archive path="E:/gitcode/maven/commons-lang/commons-lang/2.5/commons-lang-2.5.jar" />
+  </library>
+  <library name="Maven: com.spatial4j:spatial4j:0.4.1">
+    <archive path="E:/gitcode/maven/com/spatial4j/spatial4j/0.4.1/spatial4j-0.4.1.jar" />
+  </library>
+  <library name="Maven: org.springframework.amqp:spring-rabbit:1.1.1.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/amqp/spring-rabbit/1.1.1.RELEASE/spring-rabbit-1.1.1.RELEASE.jar" />
+  </library>
+  <library name="Maven: net.sf.ehcache:ehcache:1.2.3">
+    <archive path="E:/gitcode/maven/net/sf/ehcache/ehcache/1.2.3/ehcache-1.2.3.jar" />
+  </library>
+  <library name="Maven: commons-io:commons-io:2.4">
+    <archive path="E:/gitcode/maven/commons-io/commons-io/2.4/commons-io-2.4.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-grouping:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-grouping/4.10.4/lucene-grouping-4.10.4.jar" />
+  </library>
+  <library name="Maven: c3p0:c3p0:0.9.1.2">
+    <archive path="E:/gitcode/maven/c3p0/c3p0/0.9.1.2/c3p0-0.9.1.2.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-spatial:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-spatial/4.10.4/lucene-spatial-4.10.4.jar" />
+  </library>
+  <library name="Maven: org.hibernate:hibernate:3.2.6.ga">
+    <archive path="E:/gitcode/maven/org/hibernate/hibernate/3.2.6.ga/hibernate-3.2.6.ga.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-analyzers-common:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-analyzers-common/4.10.4/lucene-analyzers-common-4.10.4.jar" />
+  </library>
+  <library name="Maven: org.apache.lucene:lucene-queries:4.10.4">
+    <archive path="E:/gitcode/maven/org/apache/lucene/lucene-queries/4.10.4/lucene-queries-4.10.4.jar" />
+  </library>
+  <library name="Maven: org.apache.commons:commons-pool2:2.0">
+    <archive path="E:/gitcode/maven/org/apache/commons/commons-pool2/2.0/commons-pool2-2.0.jar" />
+  </library>
+  <library name="Maven: com.fasterxml.jackson.core:jackson-core:2.5.0">
+    <archive path="E:/gitcode/maven/com/fasterxml/jackson/core/jackson-core/2.5.0/jackson-core-2.5.0.jar" />
+  </library>
+  <library name="Maven: org.slf4j:jul-to-slf4j:1.7.7">
+    <archive path="E:/gitcode/maven/org/slf4j/jul-to-slf4j/1.7.7/jul-to-slf4j-1.7.7.jar" />
+  </library>
+  <library name="Maven: org.hibernate:hibernate-annotations:3.3.1.GA">
+    <archive path="E:/gitcode/maven/org/hibernate/hibernate-annotations/3.3.1.GA/hibernate-annotations-3.3.1.GA.jar" />
+  </library>
+  <library name="Maven: dom4j:dom4j:1.6.1">
+    <archive path="E:/gitcode/maven/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" />
+  </library>
+  <library name="Maven: org.springframework:spring-expression:4.1.4.RELEASE">
+    <archive path="E:/gitcode/maven/org/springframework/spring-expression/4.1.4.RELEASE/spring-expression-4.1.4.RELEASE.jar" />
+  </library>
+  <library name="Maven: org.aspectj:aspectjweaver:1.8.4">
+    <archive path="E:/gitcode/maven/org/aspectj/aspectjweaver/1.8.4/aspectjweaver-1.8.4.jar" />
+  </library>
+  <library name="Maven: org.hibernate:hibernate-entitymanager:3.3.2.GA">
+    <archive path="E:/gitcode/maven/org/hibernate/hibernate-entitymanager/3.3.2.GA/hibernate-entitymanager-3.3.2.GA.jar" />
+  </library>
+</eclipse-userlibraries>
+

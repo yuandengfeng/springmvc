@@ -1,0 +1,5 @@
+入口类：com.mybatis.main.main1
+数据表类：com.mybatis.mybatis.user
+方法类：com.mybatis.mybatis.userMapper
+对应的映射xml文件：resources/mappings/userMapper.xml
+配置文件载入：resources/conf.xml
