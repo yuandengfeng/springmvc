@@ -39,7 +39,7 @@ public class ReEsService {
         } catch (ElasticsearchException e) {
             LoggerFactory.getLogger(ReEsService.class).warn("{}", e);
         }
-        System.out.println(a);
+        System.out.println("searchTotalNum========"+a);
         return (int) a;
     }
 

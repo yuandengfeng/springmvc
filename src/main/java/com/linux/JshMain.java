@@ -6,7 +6,7 @@ public class JshMain {
 
         byte[] b = new byte[1024];
 
-        //有效数据个数
+        //鏈夋晥鏁版嵁涓暟
 
         int n = 0;
 
@@ -14,29 +14,29 @@ public class JshMain {
 
             while(true){
 
-                //提示信息
+                //鎻愮ず淇℃伅
 
-                System.out.println("请输入：");
+                System.out.println("璇疯緭鍏ワ細");
 
-                //读取数据
+                //璇诲彇鏁版嵁
 
                 n = System.in.read(b);
 
-                //转换为字符串
+                //杞崲涓哄瓧绗︿覆
 
                 String s = new String(b,0,n - 2);
 
-                //判断是否是quit
+                //鍒ゆ柇鏄惁鏄痲uit
 
                 if(s.equalsIgnoreCase("quit")){
 
-                    break; //结束循环
+                    break; //缁撴潫寰幆
 
                 }
 
-                //回显内容
+                //鍥炴樉鍐呭
 
-                System.out.println("输入内容为：" + s);
+                System.out.println("杈撳叆鍐呭涓猴細" + s);
 
             }
 

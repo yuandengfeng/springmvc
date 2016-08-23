@@ -18,7 +18,7 @@ public class ShellUtils {
 	private static Session session;
 
 	/**
-	 * Á¬½Óµ½Ö¸¶¨µÄIP
+	 * è¿æ¥åˆ°æŒ‡å®šçš„IP
 	 * @throws JSchException
 	 */
 	public static void  connect(String user,String passwd,String host) throws JSchException {
@@ -35,7 +35,7 @@ public class ShellUtils {
 	}
 
 	/**
-	 *Ö´ĞĞÏà¹ØµÄÃüÁî ?
+	 *æ‰§è¡Œç›¸å…³çš„å‘½ä»¤ ?
 	 * @throws JSchException
 	 */
 	public static void execCmd(String command,String user,String passwd,String host) throws JSchException {
@@ -88,8 +88,8 @@ public class ShellUtils {
 	}
 
 	/**
-	 * Ö´ĞĞÏà¹ØÃüÁî
-	 * ½çÃæ½»»¥
+	 * æ‰§è¡Œç›¸å…³å‘½ä»¤
+	 * ç•Œé¢äº¤äº’
 	 * param args
 	 * @throws IOException
 	 */
@@ -104,17 +104,17 @@ public class ShellUtils {
 //try{
 //     Channel channel = session.openChannel("exec");
 		while(true){
-			System.out.println("ÇëÊäÈë£º");
+			System.out.println("è¯·è¾“å…¥ï¼š");
 			n = System.in.read(b);
 //			String command = new String(b,0,n - 2);
 			String command = new String(b,0,n-3);
 			if(command.equalsIgnoreCase("quit"))
 			{
-				break; //½áÊøÑ­»·
+				break; //ç»“æŸå¾ªç¯
 			}
 //		      Channel  channel = session.openChannel("exec");
 			channel = session.openChannel("exec");
-			System.out.println("ÒÑ½ÓÊÜÃüÁî");
+			System.out.println("å·²æ¥å—å‘½ä»¤");
 			((ChannelExec) channel).setCommand(command);
 			channel.setInputStream(null);
 			((ChannelExec) channel).setErrStream(System.err);
@@ -122,12 +122,12 @@ public class ShellUtils {
 			{
 				System.out.println(channel.isConnected());
 				channel.connect();
-				System.out.println("ÖØĞÂÁ¬½Ó");
+				System.out.println("é‡æ–°è¿æ¥");
 			}
-			System.out.println("ÒÑ½ÓÖ´ĞĞÃüÁî");
+			System.out.println("å·²æ¥æ‰§è¡Œå‘½ä»¤");
 			InputStream in = channel.getInputStream();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-			System.out.println("´òÓ¡Êä³ö½á¹û");
+			System.out.println("æ‰“å°è¾“å‡ºç»“æœ");
 			String buf = null;
 			System.out.println(reader.read());
 			if(reader.read() != -1)
@@ -137,7 +137,7 @@ public class ShellUtils {
 					System.out.println(buf);
 				}
 				reader.close();
-				System.out.println("Êä³ö½á¹û´òÓ¡Íê±Ï");
+				System.out.println("è¾“å‡ºç»“æœæ‰“å°å®Œæ¯•");
 			}
 			else
 				continue;

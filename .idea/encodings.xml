@@ -3,8 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/controller" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/linux/JshMain.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/linux/ShellUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/linux/JshMain.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/linux/ShellUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mybatis/main" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/tool/dynamicFile/ConfigManager.java" charset="UTF-8" />
