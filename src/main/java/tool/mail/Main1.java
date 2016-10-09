@@ -16,17 +16,17 @@ import java.util.List;
 public class Main1 {
 
     public static void main(String[] args){
-        String hostName = "smtp.exmail.qq.com";   //SMTP·şÎñÆ÷
+        String hostName = "smtp.exmail.qq.com";   //SMTPæœåŠ¡å™¨
 //        String hostName = "smtp.ym.163.com";
-        String emailFrom = "yuandengfeng@kunteng.org";    //·¢ĞÅÈË
+        String emailFrom = "yuandengfeng12333@kunteng.org";    //å‘ä¿¡äºº
 //        String emailFrom = "yuandengfeng@ambimmort.com";
-        String  nameFrom= "Ô¬µÇ·å";     //ÊÕĞÅÈË
-//        String copyto = "³­ËÍÈË";
-        String subject = "²âÊÔ";
-        String content = "²âÊÔ";
+        String  nameFrom= "è¢ç™»å³°";     //æ”¶ä¿¡äºº
+//        String copyto = "æŠ„é€äºº";
+        String subject = "æµ‹è¯•";
+        String content = "æµ‹è¯•";
         String username="yuandengfeng@kunteng.org";
 //        String username="yuandengfeng@ambimmort.com";
-        String password="KTroot1215";
+        String password="12333KTroot1215";
         List<InternetAddress> inter = new ArrayList<InternetAddress>();
         try {
             inter.add(new InternetAddress("yuandengfeng@kunteng.org"));
@@ -37,6 +37,6 @@ public class Main1 {
         }
 
 //        Mail.sendEmail( hostName, emailFrom, nameFrom, subject,  content, username, password);
-        Mail.sendEmailTo(inter,"²âÊÔ","²âÊÔ");
+        Mail.sendEmailTo(inter,"æµ‹è¯•","æµ‹è¯•");
     }
 }
