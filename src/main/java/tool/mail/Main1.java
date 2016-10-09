@@ -24,7 +24,7 @@ public class Main1 {
 //        String copyto = "抄送人";
         String subject = "测试";
         String content = "测试";
-        String username="yuandengfeng@kunteng.org";
+        String username="yuandengfeng123333@kunteng.org";
 //        String username="yuandengfeng@ambimmort.com";
         String password="12333KTroot1215";
         List<InternetAddress> inter = new ArrayList<InternetAddress>();
