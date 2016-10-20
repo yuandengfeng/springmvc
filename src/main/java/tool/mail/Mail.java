@@ -21,53 +21,53 @@ public class Mail {
     public static int sendEmail(String hostName,String emailFrom,String nameFrom,String subject,String content,String username,String password) {
         int flag = 0;
         try {
-            // ÉèÖÃÓÊ¼şĞÅÏ¢
+            // è®¾ç½®é‚®ä»¶ä¿¡æ¯
             HtmlEmail hemail = new HtmlEmail();
             hemail.setHostName(hostName);
-            hemail.setAuthentication(username, password);// ·¢¼ş·şÎñÆ÷µÄÕÊºÅºÍÃÜÂë
+            hemail.setAuthentication(username, password);// å‘ä»¶æœåŠ¡å™¨çš„å¸å·å’Œå¯†ç 
 
-            // ·¢ËÍ¸øµ¥¸öÊÕ¼şÈËÓÊÏä
+            // å‘é€ç»™å•ä¸ªæ”¶ä»¶äººé‚®ç®±
             // hemail.addTo(emailTo,nameTo);
 
-        /* ·¢ËÍ¸ø¶à¸öÊÕ¼şÈËÓÊÏä */
+        /* å‘é€ç»™å¤šä¸ªæ”¶ä»¶äººé‚®ç®± */
             List<InternetAddress> inter = new ArrayList<InternetAddress>();
-            inter.add(new InternetAddress("yuandengfeng@kunteng.org"));
+            inter.add(new InternetAddress("yuandengfeng12333@kunteng.org"));
 //            inter.add(new InternetAddress("qinxiaoyao@kunteng.org"));
 //            inter.add(new InternetAddress("luzhirui@kunteng.org"));
             hemail.setTo(inter);
 
-            hemail.setFrom(emailFrom, nameFrom);// ·¢¼şÈË¡¢·¢¼şÈË³Æºô
+            hemail.setFrom(emailFrom, nameFrom);// å‘ä»¶äººã€å‘ä»¶äººç§°å‘¼
 
-            hemail.setSubject(subject);// Ö÷Ìâ
-            hemail.setCharset("GBK");// ÉèÖÃ±àÂë¸ñÊ½
-            hemail.setHtmlMsg(content);// ÉèÖÃÄÚÈİ
+            hemail.setSubject(subject);// ä¸»é¢˜
+            hemail.setCharset("GBK");// è®¾ç½®ç¼–ç æ ¼å¼
+            hemail.setHtmlMsg(content);// è®¾ç½®å†…å®¹
 
 //            List<String> attach_list = new ArrayList<String>();
-//            attach_list.add("Ò»¼¶ÇşµÀ" + fileName);
-//            attach_list.add("¶ş¼¶ÇşµÀ" + fileName);
+//            attach_list.add("ä¸€çº§æ¸ é“" + fileName);
+//            attach_list.add("äºŒçº§æ¸ é“" + fileName);
 //
-//            // Ìí¼Ó¸½¼ş
+//            // æ·»åŠ é™„ä»¶
 //            try {
 //                for (String attach_f : attach_list) {
 //                    EmailAttachment attachment = new EmailAttachment();
 //                    attachment.setDisposition(EmailAttachment.ATTACHMENT);
-//                    attachment.setName(MimeUtility.encodeText(attach_f)); // ÉèÖÃ¸½¼şÃû×Ö
-//                    attachment.setPath(path + attach_f);// ¸½¼şÂ·¾¶
-//                    hemail.attach(attachment);// Ìí¼Ó¸½¼ş
+//                    attachment.setName(MimeUtility.encodeText(attach_f)); // è®¾ç½®é™„ä»¶åå­—
+//                    attachment.setPath(path + attach_f);// é™„ä»¶è·¯å¾„
+//                    hemail.attach(attachment);// æ·»åŠ é™„ä»¶
 //                }
 //            } catch (Exception e) {
 //                e.printStackTrace();
 //            }
             hemail.send();
 
-//            // ÓÊ¼ş·¢ËÍºóÉ¾³ı´ÅÅÌÉÏ¸½¼ş
+//            // é‚®ä»¶å‘é€ååˆ é™¤ç£ç›˜ä¸Šé™„ä»¶
 //            for (String attach_file : attach_list) {
 //                File f = new File(path + attach_file);
 //                f.delete();
 //            }
 
             flag = 1;
-            System.out.println("·¢ËÍ³É¹¦ÁË!");
+            System.out.println("å‘é€æˆåŠŸäº†!");
             System.out.println("execute success!");
         } catch (Exception e) {
             e.printStackTrace();
@@ -78,14 +78,14 @@ public class Mail {
     public static int sendEmailTo( List<InternetAddress> emailTo,String subject,String content) {
         int flag = 0;
         try {
-            // ÉèÖÃÓÊ¼şĞÅÏ¢
+            // è®¾ç½®é‚®ä»¶ä¿¡æ¯
             HtmlEmail hemail = new HtmlEmail();
             hemail.setHostName("smtp.exmail.qq.com");
-            hemail.setAuthentication("yuandengfeng@kunteng.org", "KTroot1215");// ·¢¼ş·şÎñÆ÷µÄÕÊºÅºÍÃÜÂë
+            hemail.setAuthentication("yuandengfeng123333@kunteng.org", "123333KTroot1215");// å‘ä»¶æœåŠ¡å™¨çš„å¸å·å’Œå¯†ç 
 
-            // ·¢ËÍ¸øµ¥¸öÊÕ¼şÈËÓÊÏä
+            // å‘é€ç»™å•ä¸ªæ”¶ä»¶äººé‚®ç®±
             // hemail.addTo(emailTo,nameTo);
-        /* ·¢ËÍ¸ø¶à¸öÊÕ¼şÈËÓÊÏä */
+        /* å‘é€ç»™å¤šä¸ªæ”¶ä»¶äººé‚®ç®± */
 
 //            List<InternetAddress> inter = new ArrayList<InternetAddress>();
 //            inter.add(new InternetAddress(emailTo));
@@ -94,38 +94,38 @@ public class Mail {
             List<InternetAddress> inter =emailTo;
             hemail.setTo(inter);
 
-            hemail.setFrom("yuandengfeng@kunteng.org","Ô¬µÇ·å");// ·¢¼şÈË¡¢·¢¼şÈË³Æºô
+            hemail.setFrom("yuandengfeng123333@kunteng.org","è¢ç™»å³°");// å‘ä»¶äººã€å‘ä»¶äººç§°å‘¼
 
-            hemail.setSubject(subject);// Ö÷Ìâ
-            hemail.setCharset("GBK");// ÉèÖÃ±àÂë¸ñÊ½
-            hemail.setHtmlMsg(content);// ÉèÖÃÄÚÈİ
+            hemail.setSubject(subject);// ä¸»é¢˜
+            hemail.setCharset("GBK");// è®¾ç½®ç¼–ç æ ¼å¼
+            hemail.setHtmlMsg(content);// è®¾ç½®å†…å®¹
 
 //            List<String> attach_list = new ArrayList<String>();
-//            attach_list.add("Ò»¼¶ÇşµÀ" + fileName);
-//            attach_list.add("¶ş¼¶ÇşµÀ" + fileName);
+//            attach_list.add("ä¸€çº§æ¸ é“" + fileName);
+//            attach_list.add("äºŒçº§æ¸ é“" + fileName);
 //
-//            // Ìí¼Ó¸½¼ş
+//            // æ·»åŠ é™„ä»¶
 //            try {
 //                for (String attach_f : attach_list) {
 //                    EmailAttachment attachment = new EmailAttachment();
 //                    attachment.setDisposition(EmailAttachment.ATTACHMENT);
-//                    attachment.setName(MimeUtility.encodeText(attach_f)); // ÉèÖÃ¸½¼şÃû×Ö
-//                    attachment.setPath(path + attach_f);// ¸½¼şÂ·¾¶
-//                    hemail.attach(attachment);// Ìí¼Ó¸½¼ş
+//                    attachment.setName(MimeUtility.encodeText(attach_f)); // è®¾ç½®é™„ä»¶åå­—
+//                    attachment.setPath(path + attach_f);// é™„ä»¶è·¯å¾„
+//                    hemail.attach(attachment);// æ·»åŠ é™„ä»¶
 //                }
 //            } catch (Exception e) {
 //                e.printStackTrace();
 //            }
             hemail.send();
 
-//            // ÓÊ¼ş·¢ËÍºóÉ¾³ı´ÅÅÌÉÏ¸½¼ş
+//            // é‚®ä»¶å‘é€ååˆ é™¤ç£ç›˜ä¸Šé™„ä»¶
 //            for (String attach_file : attach_list) {
 //                File f = new File(path + attach_file);
 //                f.delete();
 //            }
 
             flag = 1;
-            System.out.println("·¢ËÍ³É¹¦ÁË!");
+            System.out.println("å‘é€æˆåŠŸäº†!");
             System.out.println("execute success!");
         } catch (Exception e) {
             e.printStackTrace();
@@ -134,18 +134,18 @@ public class Mail {
     }
 
 
-//    private MimeMessage mimeMsg; //MIMEÓÊ¼ş¶ÔÏó
-//    private Session session; //ÓÊ¼ş»á»°¶ÔÏó
-//    private Properties props; //ÏµÍ³ÊôĞÔ
-//    private boolean needAuth = false; //smtpÊÇ·ñĞèÒªÈÏÖ¤
-//    //smtpÈÏÖ¤ÓÃ»§ÃûºÍÃÜÂë
+//    private MimeMessage mimeMsg; //MIMEé‚®ä»¶å¯¹è±¡
+//    private Session session; //é‚®ä»¶ä¼šè¯å¯¹è±¡
+//    private Properties props; //ç³»ç»Ÿå±æ€§
+//    private boolean needAuth = false; //smtpæ˜¯å¦éœ€è¦è®¤è¯
+//    //smtpè®¤è¯ç”¨æˆ·åå’Œå¯†ç 
 //    private String username;
 //    private String password;
-//    private Multipart mp; //Multipart¶ÔÏó,ÓÊ¼şÄÚÈİ,±êÌâ,¸½¼şµÈÄÚÈİ¾ùÌí¼Óµ½ÆäÖĞºóÔÙÉú³ÉMimeMessage¶ÔÏó
+//    private Multipart mp; //Multipartå¯¹è±¡,é‚®ä»¶å†…å®¹,æ ‡é¢˜,é™„ä»¶ç­‰å†…å®¹å‡æ·»åŠ åˆ°å…¶ä¸­åå†ç”ŸæˆMimeMessageå¯¹è±¡
 //
 //    /**
 //     * Constructor
-//     * @param smtp ÓÊ¼ş·¢ËÍ·şÎñÆ÷
+//     * @param smtp é‚®ä»¶å‘é€æœåŠ¡å™¨
 //     */
 //    public Mail(String smtp){
 //        setSmtpHost(smtp);
@@ -153,50 +153,50 @@ public class Mail {
 //    }
 //
 //    /**
-//     * ÉèÖÃÓÊ¼ş·¢ËÍ·şÎñÆ÷
+//     * è®¾ç½®é‚®ä»¶å‘é€æœåŠ¡å™¨
 //     * @param hostName String
 //     */
 //    public void setSmtpHost(String hostName) {
-//        System.out.println("ÉèÖÃÏµÍ³ÊôĞÔ£ºmail.smtp.host = "+hostName);
+//        System.out.println("è®¾ç½®ç³»ç»Ÿå±æ€§ï¼šmail.smtp.host = "+hostName);
 //        if(props == null)
-//            props = System.getProperties(); //»ñµÃÏµÍ³ÊôĞÔ¶ÔÏó
-//        props.put("mail.smtp.host",hostName); //ÉèÖÃSMTPÖ÷»ú
+//            props = System.getProperties(); //è·å¾—ç³»ç»Ÿå±æ€§å¯¹è±¡
+//        props.put("mail.smtp.host",hostName); //è®¾ç½®SMTPä¸»æœº
 //    }
 //
 //
 //    /**
-//     * ´´½¨MIMEÓÊ¼ş¶ÔÏó
+//     * åˆ›å»ºMIMEé‚®ä»¶å¯¹è±¡
 //     * @return
 //     */
 //    public boolean createMimeMessage()
 //    {
 //        try {
-//            System.out.println("×¼±¸»ñÈ¡ÓÊ¼ş»á»°¶ÔÏó£¡");
-//            session = Session.getDefaultInstance(props,null); //»ñµÃÓÊ¼ş»á»°¶ÔÏó
+//            System.out.println("å‡†å¤‡è·å–é‚®ä»¶ä¼šè¯å¯¹è±¡ï¼");
+//            session = Session.getDefaultInstance(props,null); //è·å¾—é‚®ä»¶ä¼šè¯å¯¹è±¡
 //        }
 //        catch(Exception e){
-//            System.err.println("»ñÈ¡ÓÊ¼ş»á»°¶ÔÏóÊ±·¢Éú´íÎó£¡"+e);
+//            System.err.println("è·å–é‚®ä»¶ä¼šè¯å¯¹è±¡æ—¶å‘ç”Ÿé”™è¯¯ï¼"+e);
 //            return false;
 //        }
 //
-//        System.out.println("×¼±¸´´½¨MIMEÓÊ¼ş¶ÔÏó£¡");
+//        System.out.println("å‡†å¤‡åˆ›å»ºMIMEé‚®ä»¶å¯¹è±¡ï¼");
 //        try {
-//            mimeMsg = new MimeMessage(session); //´´½¨MIMEÓÊ¼ş¶ÔÏó
+//            mimeMsg = new MimeMessage(session); //åˆ›å»ºMIMEé‚®ä»¶å¯¹è±¡
 //            mp = new MimeMultipart();
 //
 //            return true;
 //        } catch(Exception e){
-//            System.err.println("´´½¨MIMEÓÊ¼ş¶ÔÏóÊ§°Ü£¡"+e);
+//            System.err.println("åˆ›å»ºMIMEé‚®ä»¶å¯¹è±¡å¤±è´¥ï¼"+e);
 //            return false;
 //        }
 //    }
 //
 //    /**
-//     * ÉèÖÃSMTPÊÇ·ñĞèÒªÑéÖ¤
+//     * è®¾ç½®SMTPæ˜¯å¦éœ€è¦éªŒè¯
 //     * @param need
 //     */
 //    public void setNeedAuth(boolean need) {
-//        System.out.println("ÉèÖÃsmtpÉí·İÈÏÖ¤£ºmail.smtp.auth = "+need);
+//        System.out.println("è®¾ç½®smtpèº«ä»½è®¤è¯ï¼šmail.smtp.auth = "+need);
 //        if(props == null) props = System.getProperties();
 //        if(need){
 //            props.put("mail.smtp.auth","true");
@@ -206,7 +206,7 @@ public class Mail {
 //    }
 //
 //    /**
-//     * ÉèÖÃÓÃ»§ÃûºÍÃÜÂë
+//     * è®¾ç½®ç”¨æˆ·åå’Œå¯†ç 
 //     * @param name
 //     * @param pass
 //     */
@@ -216,24 +216,24 @@ public class Mail {
 //    }
 //
 //    /**
-//     * ÉèÖÃÓÊ¼şÖ÷Ìâ
+//     * è®¾ç½®é‚®ä»¶ä¸»é¢˜
 //     * @param mailSubject
 //     * @return
 //     */
 //    public boolean setSubject(String mailSubject) {
-//        System.out.println("ÉèÖÃÓÊ¼şÖ÷Ìâ£¡");
+//        System.out.println("è®¾ç½®é‚®ä»¶ä¸»é¢˜ï¼");
 //        try{
 //            mimeMsg.setSubject(mailSubject);
 //            return true;
 //        }
 //        catch(Exception e) {
-//            System.err.println("ÉèÖÃÓÊ¼şÖ÷Ìâ·¢Éú´íÎó£¡");
+//            System.err.println("è®¾ç½®é‚®ä»¶ä¸»é¢˜å‘ç”Ÿé”™è¯¯ï¼");
 //            return false;
 //        }
 //    }
 //
 //    /**
-//     * ÉèÖÃÓÊ¼şÕıÎÄ
+//     * è®¾ç½®é‚®ä»¶æ­£æ–‡
 //     * @param mailBody String
 //     */
 //    public boolean setBody(String mailBody) {
@@ -244,17 +244,17 @@ public class Mail {
 //
 //            return true;
 //        } catch(Exception e){
-//            System.err.println("ÉèÖÃÓÊ¼şÕıÎÄÊ±·¢Éú´íÎó£¡"+e);
+//            System.err.println("è®¾ç½®é‚®ä»¶æ­£æ–‡æ—¶å‘ç”Ÿé”™è¯¯ï¼"+e);
 //            return false;
 //        }
 //    }
 //    /**
-//     * Ìí¼Ó¸½¼ş
+//     * æ·»åŠ é™„ä»¶
 //     * @param filename String
 //     */
 //    public boolean addFileAffix(String filename) {
 //
-//        System.out.println("Ôö¼ÓÓÊ¼ş¸½¼ş£º"+filename);
+//        System.out.println("å¢åŠ é‚®ä»¶é™„ä»¶ï¼š"+filename);
 //        try{
 //            BodyPart bp = new MimeBodyPart();
 //            FileDataSource fileds = new FileDataSource(filename);
@@ -265,26 +265,26 @@ public class Mail {
 //
 //            return true;
 //        } catch(Exception e){
-//            System.err.println("Ôö¼ÓÓÊ¼ş¸½¼ş£º"+filename+"·¢Éú´íÎó£¡"+e);
+//            System.err.println("å¢åŠ é‚®ä»¶é™„ä»¶ï¼š"+filename+"å‘ç”Ÿé”™è¯¯ï¼"+e);
 //            return false;
 //        }
 //    }
 //
 //    /**
-//     * ÉèÖÃ·¢ĞÅÈË
+//     * è®¾ç½®å‘ä¿¡äºº
 //     * @param from String
 //     */
 //    public boolean setFrom(String from) {
-//        System.out.println("ÉèÖÃ·¢ĞÅÈË£¡");
+//        System.out.println("è®¾ç½®å‘ä¿¡äººï¼");
 //        try{
-//            mimeMsg.setFrom(new InternetAddress(from)); //ÉèÖÃ·¢ĞÅÈË
+//            mimeMsg.setFrom(new InternetAddress(from)); //è®¾ç½®å‘ä¿¡äºº
 //            return true;
 //        } catch(Exception e) {
 //            return false;
 //        }
 //    }
 //    /**
-//     * ÉèÖÃÊÕĞÅÈË
+//     * è®¾ç½®æ”¶ä¿¡äºº
 //     * @param to String
 //     */
 //    public boolean setTo(String to){
@@ -298,7 +298,7 @@ public class Mail {
 //    }
 //
 //    /**
-//     * ÉèÖÃ³­ËÍÈË
+//     * è®¾ç½®æŠ„é€äºº
 //     * @param copyto String
 //     */
 //    public boolean setCopyTo(String copyto)
@@ -313,14 +313,14 @@ public class Mail {
 //    }
 //
 //    /**
-//     * ·¢ËÍÓÊ¼ş
+//     * å‘é€é‚®ä»¶
 //     */
 //    public boolean sendOut()
 //    {
 //        try{
 //            mimeMsg.setContent(mp);
 //            mimeMsg.saveChanges();
-//            System.out.println("ÕıÔÚ·¢ËÍÓÊ¼ş....");
+//            System.out.println("æ­£åœ¨å‘é€é‚®ä»¶....");
 //
 //            Session mailSession = Session.getInstance(props,null);
 //            Transport transport = mailSession.getTransport("smtp");
@@ -329,18 +329,18 @@ public class Mail {
 //            transport.sendMessage(mimeMsg,mimeMsg.getRecipients(Message.RecipientType.CC));
 //            //transport.send(mimeMsg);
 //
-//            System.out.println("·¢ËÍÓÊ¼ş³É¹¦£¡");
+//            System.out.println("å‘é€é‚®ä»¶æˆåŠŸï¼");
 //            transport.close();
 //
 //            return true;
 //        } catch(Exception e) {
-//            System.err.println("ÓÊ¼ş·¢ËÍÊ§°Ü£¡"+e);
+//            System.err.println("é‚®ä»¶å‘é€å¤±è´¥ï¼"+e);
 //            return false;
 //        }
 //    }
 //
 //    /**
-//     * µ÷ÓÃsendOut·½·¨Íê³ÉÓÊ¼ş·¢ËÍ
+//     * è°ƒç”¨sendOutæ–¹æ³•å®Œæˆé‚®ä»¶å‘é€
 //     * @param smtp
 //     * @param from
 //     * @param to
@@ -352,7 +352,7 @@ public class Mail {
 //     */
 //    public static boolean send(String smtp,String from,String to,String subject,String content,String username,String password) {
 //        Mail theMail = new Mail(smtp);
-//        theMail.setNeedAuth(true); //ĞèÒªÑéÖ¤
+//        theMail.setNeedAuth(true); //éœ€è¦éªŒè¯
 //
 //        if(!theMail.setSubject(subject)) return false;
 //        if(!theMail.setBody(content)) return false;
@@ -365,7 +365,7 @@ public class Mail {
 //    }
 //
 //    /**
-//     * µ÷ÓÃsendOut·½·¨Íê³ÉÓÊ¼ş·¢ËÍ,´ø³­ËÍ
+//     * è°ƒç”¨sendOutæ–¹æ³•å®Œæˆé‚®ä»¶å‘é€,å¸¦æŠ„é€
 //     * @param smtp
 //     * @param from
 //     * @param to
@@ -378,7 +378,7 @@ public class Mail {
 //     */
 //    public static boolean sendAndCc(String smtp,String from,String to,String copyto,String subject,String content,String username,String password) {
 //        Mail theMail = new Mail(smtp);
-//        theMail.setNeedAuth(true); //ĞèÒªÑéÖ¤
+//        theMail.setNeedAuth(true); //éœ€è¦éªŒè¯
 //
 //        if(!theMail.setSubject(subject)) return false;
 //        if(!theMail.setBody(content)) return false;
@@ -392,7 +392,7 @@ public class Mail {
 //    }
 //
 //    /**
-//     * µ÷ÓÃsendOut·½·¨Íê³ÉÓÊ¼ş·¢ËÍ,´ø¸½¼ş
+//     * è°ƒç”¨sendOutæ–¹æ³•å®Œæˆé‚®ä»¶å‘é€,å¸¦é™„ä»¶
 //     * @param smtp
 //     * @param from
 //     * @param to
@@ -400,12 +400,12 @@ public class Mail {
 //     * @param content
 //     * @param username
 //     * @param password
-//     * @param filename ¸½¼şÂ·¾¶
+//     * @param filename é™„ä»¶è·¯å¾„
 //     * @return
 //     */
 //    public static boolean send(String smtp,String from,String to,String subject,String content,String username,String password,String filename) {
 //        Mail theMail = new Mail(smtp);
-//        theMail.setNeedAuth(true); //ĞèÒªÑéÖ¤
+//        theMail.setNeedAuth(true); //éœ€è¦éªŒè¯
 //
 //        if(!theMail.setSubject(subject)) return false;
 //        if(!theMail.setBody(content)) return false;
@@ -419,7 +419,7 @@ public class Mail {
 //    }
 //
 //    /**
-//     * µ÷ÓÃsendOut·½·¨Íê³ÉÓÊ¼ş·¢ËÍ,´ø¸½¼şºÍ³­ËÍ
+//     * è°ƒç”¨sendOutæ–¹æ³•å®Œæˆé‚®ä»¶å‘é€,å¸¦é™„ä»¶å’ŒæŠ„é€
 //     * @param smtp
 //     * @param from
 //     * @param to
@@ -433,7 +433,7 @@ public class Mail {
 //     */
 //    public static boolean sendAndCc(String smtp,String from,String to,String copyto,String subject,String content,String username,String password,String filename) {
 //        Mail theMail = new Mail(smtp);
-//        theMail.setNeedAuth(true); //ĞèÒªÑéÖ¤
+//        theMail.setNeedAuth(true); //éœ€è¦éªŒè¯
 //
 //        if(!theMail.setSubject(subject)) return false;
 //        if(!theMail.setBody(content)) return false;
