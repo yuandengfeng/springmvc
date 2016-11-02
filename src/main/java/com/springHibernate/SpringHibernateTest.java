@@ -1,6 +1,5 @@
 package com.springHibernate;
 
-import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -17,7 +16,7 @@ public class SpringHibernateTest {
     {
         ctx=new ClassPathXmlApplicationContext("hibernate.xml");
     }
-    @Test
+
     public void test() throws SQLException {
         DataSource dataSource= ctx.getBean(DataSource.class);
         System.out.println(dataSource.getConnection());

@@ -22,7 +22,7 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.lucene.document.Document;
-import org.apache.lucene.queryParser.ParseException;
+//import org.apache.lucene.queryParser.ParseException;
 
 /**
  *
@@ -54,7 +54,7 @@ public class RWFile2 {
 //        writeResultFile(testmap,detectIp);
         //生成详细文件
 //         luceneDResultFile(testmap,detectIp+"dominate"+date,resultFile+"WIFIAGENT_details_"+date+".csv");
-         luceneDResultFile(testmap,detectIp+"dominate"+date,resultFile+"WIFIAGENT_details_"+day+".csv");
+//         luceneDResultFile(testmap,detectIp+"dominate"+date,resultFile+"WIFIAGENT_details_"+day+".csv");
          System.out.println(detectIp+"dominate"+date);
         //根据详细文件生成按ac和城市统计的文件
 //         countByAcName (resultFile+"WIFIAGENT_details_"+date+".csv",resultFile+"WIFIAGENT_AC_"+date+".csv",resultFile+"WIFIAGENT_city_"+date+".csv");
@@ -144,49 +144,49 @@ public class RWFile2 {
          writeFile(countCityNameFile,datetime+",其他"+","+ othersip.get("其他").size()+","+othersiptimes);
     }
 //生成结果文件result.csv,传入参数地址次对象，和LuceneDB中需要的ip地址信息
-     public static void luceneDResultFile(MultiMap testmap,String dbfile,String resultdateFile)
-   {
-        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
-        SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
-        SimpleLuceneDB db = new SimpleLuceneDB(dbfile);
-        try {
-//            writeFile(resultdateFile,"用户名,所属AC name,所属AC IP,城市,私网ip类型,私网ip,打击日期,打击时间");
-            writeFile(resultdateFile,"用户名,城市,私网ip,打击日期,打击时间,共享台数");
-            List<Document> list = db.query("name_s:*",1000000);
-            for (int i = 0; i < list.size(); i++) {
-                Document doc = list.get(i);
-                String name = doc.get("name_s").substring(3);
-                String target = doc.get("target_s");
-                String data = doc.get("data_s");
-                String ip = doc.get("ip_s");
-                String total = doc.get("total_i");
-                String time1 =sdf1.format(Long.parseLong(doc.get("time_l")));
-                String time2 =sdf2.format(Long.parseLong(doc.get("time_l")));
-//                System.out.println(resultdateFile);
-//                System.out.println(name + "\t" + target + "\t" + data + "\t" + ip + "\t" + total );
-                    String key1=ip.split("\\.")[1];
-                    String key2=ip.split("\\.")[2];
-//                    System.out.println(name+","+testmap.get(key1).get(key2)+","+ip);
-                    if(testmap.get(key1).get(key2) !=null)
-                    {
-//                        String str =name+","+testmap.get(key1).get(key2)+","+ip+","+time1+","+time2;
-//                        writeFile(resultdateFile,str.replaceAll("\\?",""));
-                        String city = testmap.get(key1).get(key2).split("\\,")[2];
-//                        System.out.println(city);
-                       writeFile(resultdateFile,name+","+city+","+ip+","+time1+","+time2+","+total);
-                    }
-                    else
-                    {
-                     othersip.put("其他",name);
-                     othersiptimes++;
-                    }
-            }
-        } catch (ParseException ex) {
-            Logger.getLogger(SimpleLuceneDB.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (Exception ex) {
-            Logger.getLogger(SimpleLuceneDB.class.getName()).log(Level.SEVERE, null, ex);
-        }
-   }
+//     public static void luceneDResultFile(MultiMap testmap,String dbfile,String resultdateFile)
+//   {
+//        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+//        SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
+//        SimpleLuceneDB db = new SimpleLuceneDB(dbfile);
+//        try {
+////            writeFile(resultdateFile,"用户名,所属AC name,所属AC IP,城市,私网ip类型,私网ip,打击日期,打击时间");
+//            writeFile(resultdateFile,"用户名,城市,私网ip,打击日期,打击时间,共享台数");
+//            List<Document> list = db.query("name_s:*",1000000);
+//            for (int i = 0; i < list.size(); i++) {
+//                Document doc = list.get(i);
+//                String name = doc.get("name_s").substring(3);
+//                String target = doc.get("target_s");
+//                String data = doc.get("data_s");
+//                String ip = doc.get("ip_s");
+//                String total = doc.get("total_i");
+//                String time1 =sdf1.format(Long.parseLong(doc.get("time_l")));
+//                String time2 =sdf2.format(Long.parseLong(doc.get("time_l")));
+////                System.out.println(resultdateFile);
+////                System.out.println(name + "\t" + target + "\t" + data + "\t" + ip + "\t" + total );
+//                    String key1=ip.split("\\.")[1];
+//                    String key2=ip.split("\\.")[2];
+////                    System.out.println(name+","+testmap.get(key1).get(key2)+","+ip);
+//                    if(testmap.get(key1).get(key2) !=null)
+//                    {
+////                        String str =name+","+testmap.get(key1).get(key2)+","+ip+","+time1+","+time2;
+////                        writeFile(resultdateFile,str.replaceAll("\\?",""));
+//                        String city = testmap.get(key1).get(key2).split("\\,")[2];
+////                        System.out.println(city);
+//                       writeFile(resultdateFile,name+","+city+","+ip+","+time1+","+time2+","+total);
+//                    }
+//                    else
+//                    {
+//                     othersip.put("其他",name);
+//                     othersiptimes++;
+//                    }
+//            }
+//        } catch (ParseException ex) {
+//            Logger.getLogger(SimpleLuceneDB.class.getName()).log(Level.SEVERE, null, ex);
+//        } catch (Exception ex) {
+//            Logger.getLogger(SimpleLuceneDB.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//   }
      
 //    生成结果文件result.csv,传入参数地址次对象，和打击日志文件
    public static void writeResultFile(MultiMap testmap,String detectIp)
