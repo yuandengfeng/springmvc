@@ -11,8 +11,6 @@ import java.io.*;
 /**
  * 文件操作工具类
  * 实现文件的创建、删除、复制、压缩、解压以及目录的创建、删除、复制、压缩解压等功能
- * @author ThinkGem
- * @version 2013-06-21
  */
 public class FileTool extends org.apache.commons.io.FileUtils {
 	
