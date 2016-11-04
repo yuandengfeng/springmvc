@@ -56,11 +56,6 @@
             <version>3.3.0</version>
         </dependency>
         <!--mybatis spring 插件 -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>1.2.2</version>
-        </dependency>
 
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -322,6 +317,12 @@
             <groupId>jdom</groupId>
             <artifactId>jdom</artifactId>
             <version>1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.w3c/dom -->
+        <dependency>
+            <groupId>org.w3c</groupId>
+            <artifactId>dom</artifactId>
+            <version>2.3.0-jaxb-1.0.6</version>
         </dependency>
 
 
