@@ -34,8 +34,8 @@ public class Test1 {
      * @param args
      */
     public static void main(String[] args) {
-        log.debug("Test1");
-        log.warn("Test1");
+//        log.debug("Test1");
+//        log.warn("Test1");
         log.info("Test1");
         log.error("Test1");
     }

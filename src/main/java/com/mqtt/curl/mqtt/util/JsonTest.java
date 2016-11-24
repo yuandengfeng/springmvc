@@ -1,9 +1,8 @@
-package com.rest;
+package com.mqtt.curl.mqtt.util;
 
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-
 
 
 /**
@@ -40,6 +39,8 @@ public class JsonTest {
 
         array1 = root.getJSONArray("lan");
         System.out.println(array1.toString());
+
+
 
 
 

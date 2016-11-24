@@ -1,5 +1,7 @@
 package tool.xml;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.jdom.*;
 import org.jdom.input.SAXBuilder;
 import org.jdom.output.Format;
@@ -17,6 +19,8 @@ import java.util.List;
  */
 public class JdomXml {
 
+    private static Log log = LogFactory.getLog(JdomXml.class);
+
      static Book[] books = new Book[]
             {
                     new Book("江南出版社","1-3631-4","盗墓笔记","南派三叔","25.00"),
@@ -29,7 +33,7 @@ public class JdomXml {
     static String fileName="G:\\坤腾\\超汇VIPLog接口\\cc\\中华store.xml";
 
     //生成XML文件
-    public static void BuildXML() throws IOException, JDOMException {
+    public static void BuildXML()  {
         // 创建根节点 并设置它的属性 ;
         Element root = new Element("bookstore");
 //        Element version = new Element("version").setText("2.0");
@@ -47,6 +51,7 @@ public class JdomXml {
             elements.addContent(new Element("author").setText(books[i].getAuthor()));
             elements.addContent(new Element("price").setText(books[i].getPrice()));
             root.addContent(elements);
+
         }
 
         // 使xml文件 缩进效果
@@ -55,7 +60,13 @@ public class JdomXml {
         XMLOutputter XMLOut = new XMLOutputter(format);
 
 
-        XMLOut.output(Doc, new FileOutputStream(fileName));
+        try {
+            XMLOut.output(Doc, new FileOutputStream(fileName));
+        } catch (IOException e) {
+            log.error(fileName,e);
+
+        }
+        log.debug("生成XML文件成功！");
         System.out.println("生成XML文件成功！");
 
     }
@@ -155,11 +166,11 @@ public class JdomXml {
 
 
     public static void main(String[] args) throws JDOMException, IOException {
-//        BuildXML();
+        BuildXML();
 //        ReadXml();//读取xml文件
 //        AddXml();//添加xml信息
 //        DeleteXml("上海出版社");//删除genre="上海出版社"这个book节点
-        UpdateXml("人民出版社");//修改genre="人民出版社"这个book节点
+//        UpdateXml("人民出版社");//修改genre="人民出版社"这个book节点
     }
 
 
