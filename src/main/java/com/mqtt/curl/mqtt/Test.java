@@ -1,8 +1,9 @@
 package com.mqtt.curl.mqtt;
 
-import curl.Cmain;
-import curl.CurlParam;
-import curl.mqtt.api.MQTTListener;
+
+import com.mqtt.curl.Cmain;
+import com.mqtt.curl.CurlParam;
+import com.mqtt.curl.mqtt.api.MQTTListener;
 import org.eclipse.paho.client.mqttv3.MqttException;
 
 import java.io.UnsupportedEncodingException;
