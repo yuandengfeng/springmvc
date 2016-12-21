@@ -1,6 +1,5 @@
 package com.mqtt.curl;
 
-
 import com.mqtt.curl.mqtt.api.MQTTClient;
 import com.mqtt.curl.mqtt.api.MQTTListener;
 import com.mqtt.curl.mqtt.exe.CMD_EXE_script;
@@ -41,7 +40,7 @@ public class Main {
 
         StringBuilder sb = new StringBuilder();
         try {
-            sb.append("curl -i -s -d \""+ URLDecoder.decode(SIDParam,"UTF-8")+"\" "+url+SID);
+            sb.append("com.mqtt.curl -i -s -d \""+ URLDecoder.decode(SIDParam,"UTF-8")+"\" "+url+SID);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }

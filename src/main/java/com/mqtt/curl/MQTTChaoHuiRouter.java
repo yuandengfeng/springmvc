@@ -134,6 +134,9 @@ public class MQTTChaoHuiRouter implements MqttCallback {
                             if (jiexi.contains("SID=2")) {//打印发票
                                 send("chaohui/ShiYun/CMD_EXE/", getPrint(id));
                             }
+                            if (jiexi.contains("SID=17")) {//返回状态
+                                send("chaohui/ShiYun/CMD_EXE/", getStatus(id));
+                            }
                         } catch (Exception e) {
                         }
                     }
@@ -164,7 +167,16 @@ public class MQTTChaoHuiRouter implements MqttCallback {
                 + "}";
         return str;
     }
-
+    public String getStatus(String id) {
+        String str = "{\n"
+                + "  \"id\":\"" + id + "\",\n"
+                + "  \"item\":\"script\",\n"
+                + "  \"log_stdout\":\"%7B%22ENCMSG%22%3A%7B%22SID%22%3A%222%22%2C%22retcode%22%3A%220%22%2C%22retmsg%22%3A%22%E6%89%93%E5%8D%B0%E6%88%90%E5%8A%9F%EF%BC%81%22%7D%7D\",\n"
+                + "  \"log_stderr\":\"\",\n"
+                + "  \"state\":\"0\"\n"
+                + "}";
+        return str;
+    }
     @Override
     public void deliveryComplete(IMqttDeliveryToken token) {
         System.out.println("finished!!");

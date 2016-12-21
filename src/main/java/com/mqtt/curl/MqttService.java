@@ -1,6 +1,5 @@
 package com.mqtt.curl;
 
-
 import com.mqtt.curl.mqtt.api.MQTTCli;
 import com.mqtt.curl.mqtt.exe.CMD_EXE_script;
 import com.mqtt.curl.mqtt.util.Base64Util;
@@ -22,8 +21,8 @@ import java.util.logging.Logger;
 public class MqttService {
 
 
-//    String url="http://192.168.0.113:9999/InvSvr";
-      String url="http://10.1.1.27:9999/InvSvr";
+    String url="http://192.168.0.183:9999/InvSvr";
+//      String url="http://10.1.1.27:9999/InvSvr";
 //    String mac="D4EE07251D06";
     String mac="D4EE07251D06";
     //初始化MQTTListener
@@ -51,7 +50,7 @@ public class MqttService {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append("curl -s -d \"SID="+SID+"&SIDParam="+SIDParam+"\" "+url);
+        sb.append("com.mqtt.curl -s -d \"SID="+SID+"&SIDParam="+SIDParam+"\" "+url);
 
         CMD cmd24 = new CMD_EXE_script(Base64Util.encode(sb.toString().getBytes()), "1");
         cmd24.setSID("chaohui");

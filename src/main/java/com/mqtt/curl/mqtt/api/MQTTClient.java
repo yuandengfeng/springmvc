@@ -6,7 +6,6 @@
 
 package com.mqtt.curl.mqtt.api;
 
-
 import com.mqtt.curl.mqtt.util.CMD;
 import com.mqtt.curl.mqtt.util.ICMDCallback;
 import org.eclipse.paho.client.mqttv3.MqttClient;

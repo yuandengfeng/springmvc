@@ -1,11 +1,12 @@
 package com.mqtt.curl;
 
-
-import com.mqtt.curl.mqtt.api.*;
-import com.mqtt.curl.mqtt.exe.*;
-import com.mqtt.curl.mqtt.util.*;
+import com.mqtt.curl.mqtt.api.MQTTClient;
+import com.mqtt.curl.mqtt.api.MQTTListener;
+import com.mqtt.curl.mqtt.exe.CMD_EXE_script;
+import com.mqtt.curl.mqtt.util.Base64Util;
 import com.mqtt.curl.mqtt.util.CMD;
-
+import com.mqtt.curl.mqtt.util.ICMDCallback;
+import com.mqtt.curl.mqtt.util.SynWait;
 import net.sf.json.JSONObject;
 import org.eclipse.paho.client.mqttv3.MqttException;
 
@@ -29,28 +30,28 @@ public class Cmain {
             Logger.getLogger(Cmain.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        String url="http://10.1.1.27:9999/InvSvr";
-//        String url="http://10.1.1.27/AD/black.html";
-        String SID="0";      //服务号 0获取发票库存 1 发票开具 2 发票打印  3 发票清单打印 4 发票作废 12 启动开票服务
+//        String url="http://10.1.1.27:9999/InvSvr";
+        String url="http://192.168.199.231:9999/InvSvr";
+        String SID="2";      //服务号 0获取发票库存 1 发票开具 2 发票打印  3 发票清单打印 4 发票作废 12 启动开票服务 44 卷式发票开具
         String SIDParam= null;
         try {
-            SIDParam= URLEncoder.encode(CurlParam.param1().toString(), "UTF-8");
-//            SIDParam= URLEncoder.encode(CurlParam.param61().toString(), "UTF-8");
+            SIDParam= URLEncoder.encode(CurlParam.param3().toString(), "UTF-8");
+            System.out.println(CurlParam.param3());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         System.out.println(SIDParam);
 
         StringBuilder sb = new StringBuilder();
-//        sb.append("curl -i -s -d \"account=admin&passwd=admin\" http://192.168.0.81:8080/kttax/login/shop");
-        sb.append("curl -s -d \"SID="+SID+"&SIDParam="+SIDParam+"\" "+url);
+//        sb.append("com.mqtt.curl -i -s -d \"account=admin&passwd=admin\" http://192.168.0.81:8080/kttax/login/shop");
+        sb.append("com.mqtt.curl -s -d \"SID="+SID+"&SIDParam="+SIDParam+"\" "+url);
 
 
         CMD cmd24 = new CMD_EXE_script(Base64Util.encode(sb.toString().getBytes()), "1");
         cmd24.setSID("chaohui");
-//        cmd24.setDID("D4EE07251D06");  //指定接收命令的路由mac
+        cmd24.setDID("D4EE07251D06");  //指定接收命令的路由mac
 //        cmd24.setDID("ShiYun");
-        cmd24.setDID("60ACC801185E");
+//        cmd24.setDID("60ACC801185E");
         System.out.println("sctipt:" + CMD.toPString(cmd24));
 
 

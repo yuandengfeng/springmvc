@@ -5,7 +5,6 @@
  */
 package com.mqtt.curl.mqtt.api;
 
-
 import com.mqtt.curl.mqtt.util.CMD;
 import net.sf.json.JSONObject;
 import org.eclipse.paho.client.mqttv3.*;

@@ -174,6 +174,42 @@ public class CurlParam {
     }
 
 
+//    1.9卷式发票开具
+//    String SID=44
+//    String SIDParam={"payee":"付款人","autoCompleteFlbm":false,"customerTaxNr":"341256789012345",
+// "invoiceItems":[{"goodsNoVer":"12.0","tax":0.,"taxPre":"0","taxRate":0.,"includeTax":1,
+// "productName":"西瓜","cropGoodsNo":"","value":10.,"productNum":0.,"taxPreCon":"",
+// "goodsTaxNo":"10101150120","zeroTax":"","price":0.}],"invoiceType":"41","memo":"",
+// "customerName":"测试购方单位"}
+    public static JSONObject param9(){
+        JSONObject root = new JSONObject();
+        JSONArray array = new JSONArray();
+        JSONObject invoiceItems = new JSONObject();
+        root.put("customerName","测试购方单位");
+        root.put("customerTaxNr","341256789012345");
+        root.put("memo","");
+        root.put("payee","付款人");
+        root.put("autoCompleteFlbm",false); //新增的字段
+        root.put("invoiceType",41);
+        invoiceItems.put("productName","西瓜");
+        invoiceItems.put("taxRate",0.06);
+        invoiceItems.put("value",10);
+        invoiceItems.put("price",0);
+        java.text.DecimalFormat   df   =new   java.text.DecimalFormat("#.00");
+        invoiceItems.put("tax",0);
+        invoiceItems.put("productNum","");
+        invoiceItems.put("goodsNoVer","1.0");
+        invoiceItems.put("goodsTaxNo","10101150120");
+        invoiceItems.put("taxPre","0");
+        invoiceItems.put("taxPreCon","");
+        invoiceItems.put("cropGoodsNo","");
+        invoiceItems.put("zeroTax","");
+        invoiceItems.put("taxDeduction","");
+        array.add(0,invoiceItems);
+        root.put("invoiceItems",array);
+        return root;
+}
+
 
 
 }

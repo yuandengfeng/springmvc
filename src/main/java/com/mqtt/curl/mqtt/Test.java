@@ -1,6 +1,5 @@
 package com.mqtt.curl.mqtt;
 
-
 import com.mqtt.curl.Cmain;
 import com.mqtt.curl.CurlParam;
 import com.mqtt.curl.mqtt.api.MQTTListener;
@@ -40,9 +39,9 @@ public class Test {
         try {
             System.out.println(url+"?SID="+SID+"&SIDParam="+URLDecoder.decode(SIDParam,"UTF-8"));
             StringBuilder sb = new StringBuilder();
-            sb.append("curl -i -s -d \"SID="+SID+"&SIDParam="+SIDParam+"\" "+url);
+            sb.append("com.mqtt.curl -i -s -d \"SID="+SID+"&SIDParam="+SIDParam+"\" "+url);
 
-            System.out.println("curl="+sb.toString()
+            System.out.println("com.mqtt.curl="+sb.toString()
             );
 
 
