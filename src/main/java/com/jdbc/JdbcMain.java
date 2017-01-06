@@ -274,7 +274,7 @@ public class JdbcMain {
                 prepareStatement = connection.prepareStatement(insert_sql);
 
 
-                File macsLoc30 = new File("G:\\坤腾\\超汇VIPLog接口\\cc\\2016-12-02_Loc_OK.txt");
+                File macsLoc30 = new File("G:\\坤腾\\超汇VIPLog接口\\cc\\2017-01-04_Loc_OK.txt");
 
                 List<String> str30 = FileUtils.readLines(macsLoc30,"utf-8");
                 List<String> li = selectAll();

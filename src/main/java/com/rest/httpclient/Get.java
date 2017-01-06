@@ -23,7 +23,7 @@ public class Get extends Thread {
 
 
           HttpResponse response= client.execute(get);
-            response.getEntity();
+//            response.getEntity();
             HttpEntity entity = response.getEntity();
            String result= EntityUtils.toString(entity,"UTF-8");
             System.out.println( result);

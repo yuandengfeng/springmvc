@@ -116,16 +116,12 @@ public class Client {
             // 编码请求参数
             if (parameters.size() == 1) {
                 for (String name : parameters.keySet()) {
-                    sb.append(name).append("=").append(
-                            java.net.URLEncoder.encode(parameters.get(name),
-                                    "UTF-8"));
+                    sb.append(name).append("=").append(java.net.URLEncoder.encode(parameters.get(name),"UTF-8"));
                 }
                 params = sb.toString();
             } else {
                 for (String name : parameters.keySet()) {
-                    sb.append(name).append("=").append(
-                            java.net.URLEncoder.encode(parameters.get(name),
-                                    "UTF-8")).append("&");
+                    sb.append(name).append("=").append(java.net.URLEncoder.encode(parameters.get(name),"UTF-8")).append("&");
                 }
                 String temp_params = sb.toString();
                 params = temp_params.substring(0, temp_params.length() - 1);
@@ -139,8 +135,13 @@ public class Client {
             // 设置通用属性
             httpConn.setRequestProperty("Accept", "*/*");
             httpConn.setRequestProperty("Connection", "Keep-Alive");
-            httpConn.setRequestProperty("User-Agent",
-                    "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
+            httpConn.setRequestProperty("User-Agent","Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
+            //设置登录验证=========================在需要登录验证的时候需要加上================================================
+//            String loginPassword = "admin"+ ":" +"public";
+//            String encoded = new sun.misc.BASE64Encoder().encode (loginPassword.getBytes());
+//            httpConn.setRequestProperty ("Authorization", "Basic " + encoded);
+            //=========================================================================
+
             // 设置POST方式
             httpConn.setDoInput(true);
             httpConn.setDoOutput(true);
@@ -152,8 +153,7 @@ public class Client {
             // flush输出流的缓冲
             out.flush();
             // 定义BufferedReader输入流来读取URL的响应，设置编码方式
-            in = new BufferedReader(new InputStreamReader(httpConn
-                    .getInputStream(), "UTF-8"));
+            in = new BufferedReader(new InputStreamReader(httpConn.getInputStream(), "UTF-8"));
             String line;
             // 读取返回的内容
             while ((line = in.readLine()) != null) {
@@ -244,7 +244,7 @@ public class Client {
      * @param args
      */
     public static void main(String[] args) {
-        Map<String, String> parameters = new HashMap<String, String>();
+//        Map<String, String> parameters = new HashMap<String, String>();
 //        parameters.put("name", "sarin");
 //        String result = sendGet("http://localhost:8080/servlets/HelloWorld", parameters);
 //        parameters.put("sign","1446808653Product");
