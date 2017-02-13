@@ -13,9 +13,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by yuandengfeng on 2017/1/6.
+ * Created by yuandengfeng on 2017/1/9.
  */
-public class GetClients {
+public class GetCompanys {
+
     /**
      * 发送POST请求
      *
@@ -121,5 +122,7 @@ public class GetClients {
         }
 
     }
+
+
 
 }
