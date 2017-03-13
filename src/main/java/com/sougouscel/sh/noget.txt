@@ -1,0 +1,4 @@
+http://download.pinyin.sogou.com/dict/download_cell.php?id=1144&name=铁枪 火枪 手枪 步枪
+http://download.pinyin.sogou.com/dict/download_cell.php?id=2554&name=海军 驱逐舰 巡洋舰 潜水艇 防护舰 航空母舰
+http://download.pinyin.sogou.com/dict/download_cell.php?id=17250&name=坦克 装甲车 步兵战车 侦察车
+http://download.pinyin.sogou.com/dict/download_cell.php?id=69072&name=房蚁  签单宝

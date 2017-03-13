@@ -1,0 +1,2 @@
+noget.sh解决url中带空格问题：会导致 echo 输出换行  wget无法抓取
+nullurl.sh在noget.sh的基础上解决了获取文件名中存在空格的问题

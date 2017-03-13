@@ -11,7 +11,7 @@ public class DBConn {
 
 	private static ConnectionSource connectionSource;
 
-//    private static Server server= null;
+//    private static Server server= null;    //创建本地h2数据库服务端
 
 	private DBConn() {
 

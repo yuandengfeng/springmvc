@@ -1,8 +1,11 @@
 package tool.dynamicFile;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by Administrator on 2016/4/22.
@@ -11,6 +14,15 @@ public class FileListenerAdaptor extends FileAlterationListenerAdaptor {
     @Override
     public void onFileCreate(File file) {
         System.out.println("create:" + file.getAbsolutePath());
+        try {
+//            打印文件内容
+            List<String> li= FileUtils.readLines(file,"UTF-8");
+            for(String str:li){
+                System.out.println(str);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

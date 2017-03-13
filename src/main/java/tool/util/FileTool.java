@@ -399,7 +399,7 @@ public class FileTool extends org.apache.commons.io.FileUtils {
 
 
 	/**
-	 * 获取待压缩文件在ZIP文件中entry的名字，即相对于跟目录的相对路径名
+	 * 获取待压缩文件在ZIP文件中entry的名字，即相对于根目录的相对路径名
 	 * @param dirPath 目录名
 	 *  entry文件名
 	 * @return
