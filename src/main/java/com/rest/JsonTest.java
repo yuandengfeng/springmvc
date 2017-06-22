@@ -5,7 +5,6 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 
-
 /**
  * Created by Administrator on 2016/8/2.
  */
@@ -40,8 +39,7 @@ public class JsonTest {
 
         array1 = root.getJSONArray("lan");
         System.out.println(array1.toString());
-
-
+        System.out.println(System.currentTimeMillis());
 
     }
 }

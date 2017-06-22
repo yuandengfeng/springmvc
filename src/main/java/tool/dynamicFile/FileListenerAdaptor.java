@@ -1,7 +1,10 @@
 package tool.dynamicFile;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.filefilter.FileFilterUtils;
 import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
+import org.apache.commons.io.monitor.FileAlterationMonitor;
+import org.apache.commons.io.monitor.FileAlterationObserver;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,25 +43,27 @@ public class FileListenerAdaptor extends FileAlterationListenerAdaptor {
         System.out.println("delete" + file.getAbsolutePath());
     }
 
-//    public static void main(String[] args) {
-//         try {
-//        // 构造观察类主要提供要观察的文件或目录，当然还有详细信息的filter
-//        FileAlterationObserver observer = new FileAlterationObserver(
-//                new File("E:/url"),null, FileFilterUtils.suffixFileFilter(".txt"));
-//        // 构造收听类
-//        FileListenerAdaptor listener = new FileListenerAdaptor();
-//        // 为观察对象添加收听对象
-//        observer.addListener(listener);
-//        // 配置Monitor，第一个参数单位是毫秒，是监听的间隔；第二个参数就是绑定我们之前的观察对象。
-//        FileAlterationMonitor fileMonitor = new FileAlterationMonitor(
-//                1000, new FileAlterationObserver[]{observer});
-//
-//            // 启动开始监听
-//            fileMonitor.start();
-//
-//        } catch (Exception ex) {
+    public static void main(String[] args) {
+         try {
+        // 构造观察类主要提供要观察的文件或目录，当然还有详细信息的filter,只处理csv文件
+        FileAlterationObserver observer = new FileAlterationObserver(
+                new File("E:\\NetBeansProjects\\dynamicFile\\Web\\conf"),
+                FileFilterUtils.suffixFileFilter(".csv"),null);
+
+        // 构造收听类
+        FileListenerAdaptor listener = new FileListenerAdaptor();
+        // 为观察对象添加收听对象
+        observer.addListener(listener);
+        // 配置Monitor，第一个参数单位是毫秒，是监听的间隔；第二个参数就是绑定我们之前的观察对象。
+        FileAlterationMonitor fileMonitor = new FileAlterationMonitor(
+                1000, new FileAlterationObserver[]{observer});
+
+            // 启动开始监听
+            fileMonitor.start();
+
+        } catch (Exception ex) {
 //            Logger.getLogger(FileListenerAdaptor.class
 //                    .getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
+        }
+    }
 }
