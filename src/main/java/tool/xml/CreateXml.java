@@ -36,10 +36,8 @@ public class CreateXml {
             author.addContent(sex);
             author.addContent(age);
             author.addContent(addr);
-
             root.addContent(version);
             root.addContent(author);
-
             for (int i = 0; i < books.length; i++) {
                 // 创建节点 book;
                 Element elements = new Element("book");
@@ -48,16 +46,13 @@ public class CreateXml {
                 elements.addContent(new Element("name").setText(books[i].getBook_name()));
                 root.addContent(elements);
             }
-
             // 使xml文件 缩进效果
             Format format = Format.getPrettyFormat();
             format.setEncoding("GBK");
-
             XMLOutputter XMLOut = new XMLOutputter(format);
 
             // 将根节点添加到文档中；
             Document Doc = new Document(root);
-
             XMLOut.output(Doc, new FileOutputStream("G:\\坤腾\\超汇VIPLog接口\\cc\\sss.xml"));
 
         }

@@ -348,7 +348,12 @@
             <artifactId>ormlite-jdbc</artifactId>
             <version>4.48</version>
         </dependency>
-
+        <!--Excel -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.9</version>
+        </dependency>
 
     </dependencies>
     <build>

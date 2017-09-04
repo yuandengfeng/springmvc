@@ -1,5 +1,6 @@
 package tool.xml;
 
+import org.apache.commons.io.output.ByteArrayOutputStream;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.jdom.*;
@@ -10,6 +11,7 @@ import org.jdom.output.XMLOutputter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -162,6 +164,27 @@ public class JdomXml {
         format.setEncoding("GBK");
         XMLOutputter out = new XMLOutputter(format);
         out.output(document, new FileOutputStream(fileName));
+    }
+
+    /**
+     * 这个方法将JDom Document对象根据指定的编码转换字符串返回。
+     * @param xmlDoc 将要被转换的JDom对象
+     * @param encoding 输出字符串使用的编码
+     * @return String Document经处理生成的字符串
+     * @throws IOException
+     */
+    public static String xmlDoctoString(Document xmlDoc, String encoding) throws IOException
+    {
+        ByteArrayOutputStream byteRep = new ByteArrayOutputStream();
+        PrintWriter out=new PrintWriter(byteRep);
+        Format format = Format.getPrettyFormat();
+        format.setEncoding(encoding);
+        XMLOutputter docWriter = new XMLOutputter(format);
+        try {
+            docWriter.output(xmlDoc, out);
+        } catch (Exception e) {
+        }
+        return byteRep.toString();
     }
 
 
